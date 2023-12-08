@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Multiple Choice Quiz</title>
+		<link rel="stylesheet" href="./css/style.css"/>
+	</head>
+	<body>
+		<form id="quiz" class="quiz">
+			<header class="quiz__head">
+				<h1 class="quiz__head__title">Multiple Choice Quiz</h1>
+				<div class="quiz__head__score score">Score: 0</div>
+				<div class="quiz__head__timer timer">60</div>
+			</header>
+		</form>
+
+		<template id="template_start">
+			<section class="card">
+				<button class="card__button">Start</button>
+			</section>
+		</template>
+
+		<template id="template_question">
+			<section class="card question">
+				<h2 class="card__title"></h2>
+				<p class="card__text"></p>
+				<div class="card__answer-container"></div>
+				<footer class="card__foot"></footer>
+			</section>
+		</template>
+
+		<template id="template_scorecard">
+			<section class="scorecard card">
+				<h2 class="scorecard__title">Game Over!</h2>
+				<p class="scorecard__text"></p>
+				<button class="card__button">Start Over?</button>
+			</section>
+		</template>
+
+		<footer>
+        </footer>
+		<script src="./js/questions.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

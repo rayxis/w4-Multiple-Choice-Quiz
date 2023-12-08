@@ -1,0 +1,77 @@
+* {
+	margin:     0;
+	padding:    0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Oswald, sans-serif;
+}
+
+.quiz {
+	display:     flex;
+	flex-flow:   column nowrap;
+	align-items: center;
+	gap:         20px;
+	padding:     20px;
+
+	width:       60%;
+	margin:      0 auto;
+
+	&__head {
+		display:         flex;
+		flex-flow:       row wrap;
+		justify-content: space-between;
+
+		&__title {
+			width:      100%;
+			text-align: center;
+		}
+
+		&__score {grid-area: score;}
+
+		&__timer {grid-area: timer;}
+	}
+}
+
+.card {
+	grid-area:        card;
+	display:          flex;
+	flex-flow:        column nowrap;
+	gap:              10px;
+	padding:          20px;
+	width:            600px;
+
+	background-color: white;
+	border-radius:    15px;
+	box-shadow:       0 10px 15px #888888;
+
+	&__title {
+
+	}
+
+	&__text {
+		padding: 20px;
+	}
+
+	&__button {
+		align-self:       center;
+		padding:          10px;
+		width:            90%;
+		font-weight:      bold;
+
+		background-color: purple;
+		color:            white;
+		border-radius:    20px;
+
+		&:hover {
+			background-color: #660066;
+			cursor:           pointer;
+			box-shadow:       inset 0 5px 5px #2D2D2D;
+		}
+	}
+
+	&__footer {
+
+	}
+}
