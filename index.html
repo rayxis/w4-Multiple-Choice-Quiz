@@ -16,8 +16,24 @@
 
 		<template id="template_start">
 			<section class="card">
+				<h2 class="card__title">High Scores</h2>
+				<ul class="highscores">
+					<li class="highscores__item">
+						<div class="highscores__item__initials">Initials</div>
+						<div class="highscores__item__score">Score</div>
+						<div class="highscores__item__time">Time</div>
+					</li>
+				</ul>
 				<button class="card__button">Start</button>
 			</section>
+		</template>
+
+		<template id="template_highscore">
+			<li class="highscores__item">
+				<div class="highscores__item__initials"></div>
+				<div class="highscores__item__score"></div>
+				<div class="highscores__item__time"></div>
+			</li>
 		</template>
 
 		<template id="template_question">

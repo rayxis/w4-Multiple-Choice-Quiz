@@ -74,4 +74,32 @@ body {
 	&__footer {
 
 	}
+
+	.highscores {
+		display:        flex;
+		flex-direction: column;
+		list-style:     none;
+		width:          210px;
+		margin:         auto;
+		counter-reset:  li;
+
+		&__item {
+			display:       flex;
+			position: relative;
+
+			&:first-child {font-weight: bold;}
+			&:not(:first-child)::before {
+				counter-increment: li;
+				content: counter(li) ".";
+				position: absolute;
+				left:  -20px;
+			}
+
+			&__initials,
+			&__score,
+			&__item {
+				width: 33%;
+			}
+		}
+	}
 }
