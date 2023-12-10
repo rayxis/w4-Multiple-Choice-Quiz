@@ -35,9 +35,9 @@ body {
 }
 
 .card {
-	grid-area:        card;
 	display:          flex;
 	flex-flow:        column nowrap;
+	align-items:      center;
 	gap:              10px;
 	padding:          20px;
 	width:            600px;
@@ -54,10 +54,17 @@ body {
 		padding: 20px;
 	}
 
+	&__button-container {
+		display:     flex;
+		flex-flow:   column nowrap;
+		align-items: center;
+		gap:         10px;
+	}
+
 	&__button {
 		align-self:       center;
 		padding:          10px;
-		width:            90%;
+		width:            540px;
 		font-weight:      bold;
 
 		background-color: purple;
@@ -75,7 +82,7 @@ body {
 
 	}
 
-	.highscores {
+	.high_scores {
 		display:        flex;
 		flex-direction: column;
 		list-style:     none;
@@ -84,15 +91,16 @@ body {
 		counter-reset:  li;
 
 		&__item {
-			display:       flex;
+			display:  flex;
 			position: relative;
 
 			&:first-child {font-weight: bold;}
+
 			&:not(:first-child)::before {
 				counter-increment: li;
-				content: counter(li) ".";
-				position: absolute;
-				left:  -20px;
+				content:           counter(li) ".";
+				position:          absolute;
+				left:              -20px;
 			}
 
 			&__initials,
@@ -101,5 +109,30 @@ body {
 				width: 33%;
 			}
 		}
+	}
+}
+
+.new_score {
+	gap:              10px;
+	padding:          20px;
+	width:            600px;
+
+	background-color: white;
+	border-radius:    15px;
+	box-shadow:       0 10px 15px #888888;
+
+	&__title {
+
+	}
+
+	&__initials {
+		font-size:     2rem;
+		text-align:    center;
+		width:         100px;
+		border-radius: 15px;
+	}
+
+	&__text {
+		padding: 20px;
 	}
 }

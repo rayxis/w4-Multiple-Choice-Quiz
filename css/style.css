@@ -34,9 +34,9 @@ body {
 }
 
 .card {
-  grid-area: card;
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
   gap: 10px;
   padding: 20px;
   width: 600px;
@@ -47,10 +47,16 @@ body {
 .card__text {
   padding: 20px;
 }
+.card__button-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 10px;
+}
 .card__button {
   align-self: center;
   padding: 10px;
-  width: 90%;
+  width: 540px;
   font-weight: bold;
   background-color: purple;
   color: white;
@@ -61,7 +67,7 @@ body {
   cursor: pointer;
   box-shadow: inset 0 5px 5px #2D2D2D;
 }
-.card .highscores {
+.card .high_scores {
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -69,21 +75,39 @@ body {
   margin: auto;
   counter-reset: li;
 }
-.card .highscores__item {
+.card .high_scores__item {
   display: flex;
   position: relative;
 }
-.card .highscores__item:first-child {
+.card .high_scores__item:first-child {
   font-weight: bold;
 }
-.card .highscores__item:not(:first-child)::before {
+.card .high_scores__item:not(:first-child)::before {
   counter-increment: li;
   content: counter(li) ".";
   position: absolute;
   left: -20px;
 }
-.card .highscores__item__initials, .card .highscores__item__score, .card .highscores__item__item {
+.card .high_scores__item__initials, .card .high_scores__item__score, .card .high_scores__item__item {
   width: 33%;
+}
+
+.new_score {
+  gap: 10px;
+  padding: 20px;
+  width: 600px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px #888888;
+}
+.new_score__initials {
+  font-size: 2rem;
+  text-align: center;
+  width: 100px;
+  border-radius: 15px;
+}
+.new_score__text {
+  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

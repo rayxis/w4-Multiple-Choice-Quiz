@@ -1,12 +1,12 @@
-const questions = [
+const quizQuestions = [
 	{
 		"query":     "What is the longest word in the English language?",
 		"answer":    "Pneumonoultramicroscopicsilicovolcanoconiosis",
 		"responses": [
 			"Antidisestablishmentarianism",
-			"Abcdef",
-			"Ghijkl",
-			"Mnopqrstuvwxyz"
+			"Floccinaucinihilipilification",
+			"Pseudopseudohypoparathyroidism",
+			"Supercalifragilisticexpialidocious"
 		]
 	},
 	{
