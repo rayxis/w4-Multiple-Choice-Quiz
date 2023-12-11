@@ -51,6 +51,11 @@ The live version of the quiz can be found here: A live version of this can be vi
 here: https://rayxis.github.io/w4-Multiple-Choice-Quiz/
 
 ## Screenshots
+![Starting screen](./screenshots/Screenshot%202023-12-11%20at%208.52.17%E2%80%AFAM.png)
+![Example question](./screenshots/Screenshot%202023-12-11%20at%208.52.28%E2%80%AFAM.png)
+![New high score](./screenshots/Screenshot%202023-12-11%20at%208.53.33%E2%80%AFAM.png)
+![Game over](./screenshots/Screenshot%202023-12-11%20at%208.53.42%E2%80%AFAM.png)
+![Mobile view](./screenshots/Screenshot%202023-12-11%20at%208.54.07%E2%80%AFAM.png)
 
 ## User Story
 
