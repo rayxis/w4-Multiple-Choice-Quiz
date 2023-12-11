@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta content='width=device-width, initial-scale=1' name='viewport'/>
 		<title>Multiple Choice Quiz</title>
 		<link rel="stylesheet" href="./css/style.css"/>
 	</head>
@@ -14,26 +15,31 @@
 			</header>
 		</form>
 
-		<template id="template_start">
-			<section class="card">
-				<h2 class="card__title">High Scores</h2>
-				<ul class="high_scores">
-					<li class="high_scores__item">
-						<div class="high_scores__item__initials">Initials</div>
-						<div class="high_scores__item__score">Score</div>
-						<div class="high_scores__item__time">Time</div>
-					</li>
-				</ul>
-				<button class="card__button">Start</button>
-			</section>
-		</template>
-
-		<template id="template_high_score">
+		<template id="template_high_score_entry">
 			<li class="high_scores__item">
 				<div class="high_scores__item__initials"></div>
 				<div class="high_scores__item__score"></div>
 				<div class="high_scores__item__time"></div>
 			</li>
+		</template>
+
+		<template id="template_high_score_list">
+			<ul class="high_scores">
+				<li class="high_scores__item">
+					<div class="high_scores__item__initials">Initials</div>
+					<div class="high_scores__item__score">Score</div>
+					<div class="high_scores__item__time">Time</div>
+				</li>
+			</ul>
+		</template>
+
+		<template id="template_new_score">
+			<section class="new_score card">
+				<h2 class="new_score__title">New High Score</h2>
+				<h3 class="new_score__score"></h3>
+				<label for="initials">Enter your initials</label>
+				<input class="new_score__initials" id="initials" type="text" maxlength="3" autocomplete="off"/>
+			</section>
 		</template>
 
 		<template id="template_question">
@@ -49,24 +55,12 @@
 			<section class="scorecard card">
 				<h2 class="scorecard__title">Game Over!</h2>
 				<p class="scorecard__text">You scored </p>
-				<ul class="high_scores">
-					<li class="high_scores__item">
-						<div class="high_scores__item__initials">Initials</div>
-						<div class="high_scores__item__score">Score</div>
-						<div class="high_scores__item__time">Time</div>
-					</li>
-				</ul>
-				<button class="card__button">Start Over?</button>
 			</section>
 		</template>
 
-		<template id="template_new_score">
-			<section class="new_score card">
-				<h2 class="new_score__title">New High Score</h2>
-				<h3 class="new_score__score"></h3>
-				<label for="initials">Enter your initials</label>
-				<input class="new_score__initials" id="initials" type="text" maxlength="3" autocomplete="off"/>
-				<button class="card__button">Submit</button>
+		<template id="template_start">
+			<section class="card">
+				<h2 class="card__title">High Scores</h2>
 			</section>
 		</template>
 

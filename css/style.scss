@@ -5,9 +5,11 @@
 }
 
 body {
-	font-family: Oswald, sans-serif;
+	font-family:      Oswald, sans-serif;
+	background-color: #EEEEEE;
 }
 
+/*  Quiz Container */
 .quiz {
 	display:     flex;
 	flex-flow:   column nowrap;
@@ -18,42 +20,47 @@ body {
 	width:       60%;
 	margin:      0 auto;
 
+	/* Quiz Header */
 	&__head {
 		display:         flex;
 		flex-flow:       row wrap;
 		justify-content: space-between;
 
+		/* Quiz Title */
 		&__title {
 			width:      100%;
 			text-align: center;
 		}
 
+		/* Current Score */
 		&__score {grid-area: score;}
 
+		/* Current Timer */
 		&__timer {grid-area: timer;}
 	}
 }
 
+/*  Card Formatting */
 .card {
 	display:          flex;
 	flex-flow:        column nowrap;
 	align-items:      center;
 	gap:              10px;
 	padding:          20px;
-	width:            600px;
+	max-width:        600px;
+	width:            80vw;
 
 	background-color: white;
 	border-radius:    15px;
 	box-shadow:       0 10px 15px #888888;
 
-	&__title {
-
-	}
-
+	/*  Question Text */
 	&__text {
-		padding: 20px;
+		padding:   20px;
+		font-size: 1.25rem;
 	}
 
+	/*  Container for Button */
 	&__button-container {
 		display:     flex;
 		flex-flow:   column nowrap;
@@ -61,57 +68,68 @@ body {
 		gap:         10px;
 	}
 
+	/*  Button */
 	&__button {
 		align-self:       center;
 		padding:          10px;
-		width:            540px;
+		width:            70vw;
+		max-width:        540px;
+
+		overflow-wrap:    break-word;
 		font-weight:      bold;
 
 		background-color: purple;
 		color:            white;
 		border-radius:    20px;
 
+		/*  Hover Effect */
 		&:hover {
 			background-color: #660066;
 			cursor:           pointer;
 			box-shadow:       inset 0 5px 5px #2D2D2D;
 		}
 	}
+}
 
-	&__footer {
+/*  High Scores Table */
+.high_scores {
+	display:        flex;
+	flex-direction: column;
+	list-style:     none;
+	width:          210px;
+	margin:         auto;
+	counter-reset:  li;
 
-	}
+	/*  High Score Row */
+	&__item {
+		display:  flex;
+		position: relative;
 
-	.high_scores {
-		display:        flex;
-		flex-direction: column;
-		list-style:     none;
-		width:          210px;
-		margin:         auto;
-		counter-reset:  li;
-
-		&__item {
-			display:  flex;
-			position: relative;
-
-			&:first-child {font-weight: bold;}
-
-			&:not(:first-child)::before {
-				counter-increment: li;
-				content:           counter(li) ".";
-				position:          absolute;
-				left:              -20px;
-			}
-
-			&__initials,
-			&__score,
-			&__item {
-				width: 33%;
-			}
+		/*  If there's an only child, there are no children. */
+		&:only-child {
+			display:    inline-block;
+			text-align: center;
 		}
+
+		/*  Table Header */
+		&:first-child:not(:only-child) {font-weight: bold;}
+
+		/*  Don't number the header */
+		&:not(:first-child)::before {
+			counter-increment: li;
+			content:           counter(li) ".";
+			position:          absolute;
+			left:              -20px;
+		}
+
+		/*  Set the width of each column */
+		&__initials,
+		&__score,
+		&__item {width: 33%;}
 	}
 }
 
+/*  New Score Entry Form */
 .new_score {
 	gap:              10px;
 	padding:          20px;
@@ -121,18 +139,11 @@ body {
 	border-radius:    15px;
 	box-shadow:       0 10px 15px #888888;
 
-	&__title {
-
-	}
-
+	/*  Initials entry box */
 	&__initials {
 		font-size:     2rem;
 		text-align:    center;
 		width:         100px;
 		border-radius: 15px;
-	}
-
-	&__text {
-		padding: 20px;
 	}
 }
