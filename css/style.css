@@ -113,9 +113,10 @@ body {
   position: absolute;
   left: -20px;
 }
-/*  Set the width of each column */
+/*  Set the width of each column and make sure initials are uppercase */
 .high_scores__item__initials, .high_scores__item__score, .high_scores__item__item {
   width: 33%;
+  text-transform: uppercase;
 }
 
 /*  New Score Entry Form */
@@ -133,6 +134,8 @@ body {
   text-align: center;
   width: 100px;
   border-radius: 15px;
+
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */

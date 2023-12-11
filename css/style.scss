@@ -125,7 +125,10 @@ body {
 		/*  Set the width of each column */
 		&__initials,
 		&__score,
-		&__item {width: 33%;}
+		&__item {
+			width: 33%;
+			text-transform: uppercase;
+		}
 	}
 }
 
@@ -145,5 +148,6 @@ body {
 		text-align:    center;
 		width:         100px;
 		border-radius: 15px;
+		text-transform: uppercase;
 	}
 }
