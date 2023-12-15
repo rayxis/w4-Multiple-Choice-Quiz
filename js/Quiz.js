@@ -134,7 +134,7 @@ class Quiz {
 		//  If the user has a high score, and they've entered their initials, save the high score.
 		if (this.highScoreCheck() && initials.length > 0) {
 			this.score.highScores.push({
-				                           initials: initials,
+				                           initials: initials.substring(0,3).toUpperCase(),
 				                           score:    this.score.points,
 				                           time:     (this.timer.start - this.timer.countdown)
 			                           });

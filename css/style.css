@@ -116,7 +116,6 @@ body {
 /*  Set the width of each column and make sure initials are uppercase */
 .high_scores__item__initials, .high_scores__item__score, .high_scores__item__item {
   width: 33%;
-  text-transform: uppercase;
 }
 
 /*  New Score Entry Form */
