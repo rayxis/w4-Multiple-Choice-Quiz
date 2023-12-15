@@ -27,7 +27,8 @@ body {
 		justify-content: space-between;
 
 		/* Quiz Title */
-		&__title {
+		&__title,
+		&__subtitle{
 			width:      100%;
 			text-align: center;
 		}

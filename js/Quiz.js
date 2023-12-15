@@ -30,15 +30,19 @@ class Quiz {
 
 
 	constructor(questions) {
+		this.questions = questions;
 		//  If settings are present, use them (otherwise use defaults).
 		if (this.questions.hasOwnProperty('settings')) {
 			this.questions.limit       = this.questions.settings.questionsLimit;
 			this.score.highScoresLimit = this.questions.settings.highScoresLimit;
 			this.timer.penalty         = this.questions.settings.timerPenalty;
 			this.timer.start           = this.questions.settings.timerStart;
+			//  Set the title of the quiz.
+			this.quiz.querySelector(".quiz__head__subtitle").textContent = this.questions.settings.title;
+			document.title += ` | ${this.questions.settings.title}`;
 		}
 		//  Shuffle the questions, and then the responses for each question.
-		this.questions.list = this.shuffle(questions.list);
+		this.questions.list = this.shuffle(this.questions.list);
 		this.questions.list.forEach((question, questionIndex) => {
 			const questionCard = this.templates.question.cloneNode(true);
 

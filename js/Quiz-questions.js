@@ -3,7 +3,8 @@ const quizQuestions = {
 		highScoresLimit: 10,  //  Limit of high scores to save
 		questionsLimit:  10,  //  The maximum number of questions
 		timerPenalty:    -10, //  Penalty for the timer for a wrong answer
-		timerStart:      60   //  Starting time of the timer
+		timerStart:      60,  //  Starting time of the timer
+		title:           "Fun Facts"
 	},
 	list:     [
 		{

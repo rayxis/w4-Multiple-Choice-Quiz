@@ -10,6 +10,7 @@
 		<form id="quiz" class="quiz">
 			<header class="quiz__head">
 				<h1 class="quiz__head__title">Multiple Choice Quiz</h1>
+				<h2 class="quiz__head__subtitle"></h2>
 				<div class="quiz__head__score score">Score: 0</div>
 				<div class="quiz__head__timer timer">60</div>
 			</header>
@@ -35,8 +36,8 @@
 
 		<template id="template_new_score">
 			<section class="new_score card">
-				<h2 class="new_score__title">New High Score</h2>
-				<h3 class="new_score__score"></h3>
+				<h3 class="new_score__title">New High Score</h3>
+				<h4 class="new_score__score"></h4>
 				<label for="initials">Enter your initials</label>
 				<input class="new_score__initials" id="initials" type="text" maxlength="3" autocomplete="off"/>
 			</section>
@@ -44,7 +45,7 @@
 
 		<template id="template_question">
 			<section class="card question">
-				<h2 class="card__title"></h2>
+				<h3 class="card__title"></h3>
 				<p class="card__text"></p>
 				<div class="card__button-container"></div>
 				<footer class="card__foot"></footer>
@@ -53,14 +54,14 @@
 
 		<template id="template_scorecard">
 			<section class="scorecard card">
-				<h2 class="scorecard__title">Game Over!</h2>
+				<h3 class="scorecard__title">Game Over!</h3>
 				<p class="scorecard__text">You scored </p>
 			</section>
 		</template>
 
 		<template id="template_start">
 			<section class="card">
-				<h2 class="card__title">High Scores</h2>
+				<h3 class="card__title">High Scores</h3>
 			</section>
 		</template>
 
