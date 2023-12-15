@@ -31,7 +31,7 @@ file, including (in alphabetical order):
 * timerPenalty - The timer penalty for a wrong answer.
 * timerStart - The amount of time (in seconds) to start the quiz with.
 
-These settings are optional to change and can remain at the default settings, and will if the settings variable 
+These settings are optional to change and can remain at the default settings, and will if the settings variable
 object is omitted from the Quiz-questions.js file. No changes should be done to Quiz.js.
 
 As long as your webserver is running and properly configured, no additional setup is required.
@@ -44,13 +44,15 @@ reduced by 10 seconds (default), and they'll progress to the next question. This
 are answered, or the timer runs out (default: 60 seconds).
 
 At the conclusion of the quiz, if the user has answered at least one question correctly, and their score is higher
-than the lowest high score (default limit: 10), they will be prompted to enter their initials. Regardless of the
-outcome, they'll be prompted if they would like to go again.
+than the lowest high score (default limit: 10), they will be prompted to enter their initials. Initials will
+be limited to 3 characters, and will be uppercase. Regardless of the outcome, they'll be prompted if they would like to
+go again.
 
 The live version of the quiz can be found here: A live version of this can be viewed
 here: https://rayxis.github.io/w4-Multiple-Choice-Quiz/
 
 ## Screenshots
+
 ![Starting screen](./screenshots/Screenshot%202023-12-11%20at%208.52.17%E2%80%AFAM.png)
 ![Example question](./screenshots/Screenshot%202023-12-11%20at%208.52.28%E2%80%AFAM.png)
 ![New high score](./screenshots/Screenshot%202023-12-11%20at%208.53.33%E2%80%AFAM.png)
